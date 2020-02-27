@@ -1,17 +1,36 @@
-var firstName = 'John';
-console.log(firstName);
+/*function calculateAge(birthYear){
+    return 2020 - birthYear;
+}
 
-var lastName = 'Smith';
-var age = 28;
-var fullAge =  true;
+var ageJohn = calculateAge(1993);
+console.log(ageJohn);
 
-console.log(fullAge);
+var x =  y -> {
+    return y;
+}
+console.log(x);
 
-var job;
+var names = ['John', 'Mark', 'Jane'];
 
-console.log(job);
+var years = new Array(1990, 1969, 1948);
 
-var joc, ismarried;
+console.log(names);
 
-job = 'teacher';
-ismarried = false;
+*/
+
+
+
+var mark = {
+    name : 'mark',
+    mass : 60,
+    height : 1.73,
+    calculateBmi : function() {
+        
+        this.bmi = this.mass / (this.height * this.height);
+               return this.bmi;
+        }
+};
+
+mark.calculateBmi();
+
+console.log(mark);
