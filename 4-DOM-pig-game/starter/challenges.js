@@ -29,7 +29,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         document.getElementById('dice-1').src = 'dice-' + dice1 + '.png';
         document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
         // update the round score if the rolled number was not a 1
-         if(dice !==1 && dice2 !==1){
+         if(dice1 !==1 && dice2 !==1){
            roundScore += dice1 + dice2;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
 
@@ -142,7 +142,25 @@ function init(){
 
 
 
+function interviewQuestion(job){
+    if(job === 'designer'){
+        return function(name){
+            console.log(name + 'Can you pease explain what UX design is?');
+        }
+       }else if(job === 'teacher'){
+                return function(name) {
+                    console.log('What subject di you teach, ' + name + '?');
+                }
+       }else{
+           return function(){
+               console.log ('Hello' + name + ', what do you do');
+           }
+       }
+}
 
+var teacherQuestion = interviewQuestion('teacher');
+
+teacherQuestion('John');
 
 
 
