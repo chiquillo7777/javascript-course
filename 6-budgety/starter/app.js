@@ -227,6 +227,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     };
 
 
+    console.log('test');
 
     var ctrlAddItem = function () {
         var input, newItem;
